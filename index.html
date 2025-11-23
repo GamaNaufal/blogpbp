@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tutorial Lengkap Mobile Development - 5 Framework Populer</title>
+    <title>Tutorial Lengkap Mobile Development</title>
     <style>
         * {
             margin: 0;
@@ -175,11 +175,24 @@
             background: linear-gradient(135deg, #e0e7ff 0%, #f3e8ff 100%);
             border: 2px dashed #667eea;
             border-radius: 8px;
-            padding: 3rem;
+            padding: 1rem; /* reduced so image fills the bordered area */
             text-align: center;
             margin: 1rem 0;
             color: #667eea;
             font-style: italic;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .screenshot-placeholder img {
+            width: 100%; /* fill the inner width of the border */
+            height: auto;
+            display: block;
+            margin: 0;
+            max-height: 480px; /* adjust if you want smaller/larger */
+            object-fit: contain;
+            border-radius: 6px;
         }
 
         pre {
@@ -287,7 +300,7 @@
 <body>
     <header>
         <div class="header-content">
-            <h1>📱 Tutorial Lengkap Mobile Development</h1>
+            <h1>Tutorial Lengkap Mobile Development</h1>
             <p class="subtitle">Panduan Instalasi dan Membuat Project HelloWorld untuk 5 Framework Populer</p>
         </div>
     </header>
@@ -300,14 +313,13 @@
             <a href="#react-native">React Native</a>
             <a href="#flutter">Flutter</a>
             <a href="#kmm">KMM</a>
-            <a href="#comparison">Perbandingan</a>
         </div>
     </nav>
 
     <div class="container">
         <section id="intro" class="intro-section">
-            <h2>Pendahuluan</h2>
-            <p>Selamat datang di tutorial lengkap mobile development! Dalam tutorial ini, saya akan memandu Anda melalui proses instalasi dan pembuatan project HelloWorld menggunakan 5 framework development mobile yang paling populer saat ini.</p>
+            <h2>Intro</h2>
+            <p>Nama : Gama Naufal A. <br> Kelas : B <br> NIM : 24060123120015 <br> Selamat datang di tutorial lengkap mobile development! Dalam tutorial ini, saya akan memandu Anda melalui proses instalasi dan pembuatan project HelloWorld menggunakan 5 framework development mobile yang paling populer saat ini.</p>
             
             <div style="margin-top: 1.5rem;">
                 <span class="badge">Android Native</span>
@@ -327,16 +339,6 @@
                 </div>
             </div>
 
-            <div class="requirements">
-                <h4>📋 Persyaratan Sistem:</h4>
-                <ul>
-                    <li>Windows 10/11, macOS 10.14+, atau Linux</li>
-                    <li>RAM minimum 8GB (disarankan 16GB)</li>
-                    <li>Ruang disk: 8GB minimum</li>
-                    <li>JDK 11 atau lebih tinggi</li>
-                </ul>
-            </div>
-
             <h3>Langkah Instalasi</h3>
 
             <div class="step">
@@ -345,7 +347,7 @@
                 <p>2. Klik tombol "Download Android Studio"</p>
                 <p>3. Setujui terms and conditions</p>
                 <div class="screenshot-placeholder">
-                    📸 Screenshot: Halaman download Android Studio dengan tombol download terlihat jelas
+                    <img src="/img/astu 1.png" alt="1" />    
                 </div>
             </div>
 
@@ -356,8 +358,9 @@
                 <p>3. Pilih tema UI (Light/Dark sesuai preferensi)</p>
                 <p>4. Tunggu hingga proses download SDK selesai</p>
                 <div class="screenshot-placeholder">
-                    📸 Screenshot: Wizard instalasi Android Studio menampilkan progress instalasi
+                    <img src="/img/astu 2.png" alt="2" />     
                 </div>
+                <p>Disini saya sebelumnya sudah install</p>
             </div>
 
             <div class="step">
@@ -366,8 +369,7 @@
                 <p>2. Masuk ke Tools → SDK Manager</p>
                 <p>3. Pastikan Android SDK terbaru terinstall</p>
                 <div class="screenshot-placeholder">
-                    📸 Screenshot: SDK Manager dengan list komponen SDK yang terinstall
-                </div>
+                    <img src="/img/astu 3.png" alt="3" /> 
             </div>
 
             <h3>Membuat Project HelloWorld</h3>
@@ -377,7 +379,7 @@
                 <p>1. Klik "New Project" di welcome screen</p>
                 <p>2. Pilih "Empty Activity"</p>
                 <div class="screenshot-placeholder">
-                    📸 Screenshot: Template selection screen dengan Empty Activity terpilih
+                    <img src="/img/astu 4.png" alt="4" /> 
                 </div>
             </div>
 
@@ -392,7 +394,7 @@
                     <li>• Minimum SDK: API 24 (Android 7.0)</li>
                 </ul>
                 <div class="screenshot-placeholder">
-                    📸 Screenshot: Form konfigurasi project dengan semua field terisi
+                    <img src="/img/astu 5.png" alt="5" /> 
                 </div>
             </div>
 
@@ -400,7 +402,7 @@
                 <h4>Step 3: Tunggu Gradle Build</h4>
                 <p>Android Studio akan melakukan sync Gradle secara otomatis. Tunggu hingga proses selesai.</p>
                 <div class="screenshot-placeholder">
-                    📸 Screenshot: Progress bar Gradle build di bagian bawah Android Studio
+                    <img src="/img/astu 6.png" alt="6" /> 
                 </div>
             </div>
 
@@ -409,7 +411,7 @@
                 <p>Perhatikan struktur folder di panel Project:</p>
                 <p>• File utama: <code>MainActivity.kt</code> dan <code>activity_main.xml</code></p>
                 <div class="screenshot-placeholder">
-                    📸 Screenshot: Project structure menampilkan folder app, manifests, dan file-file utama
+                    <img src="/img/astu 78.png" alt="78" /> 
                 </div>
             </div>
 
@@ -451,7 +453,7 @@ fun HelloWorldText() {
     }
 }</code></pre>
                 <div class="screenshot-placeholder">
-                    📸 Screenshot: Code editor dengan MainActivity.kt yang sudah diedit
+                    <img src="/img/astu 78.png" alt="78" /> 
                 </div>
             </div>
 
@@ -461,8 +463,7 @@ fun HelloWorldText() {
                 <p>2. Pilih emulator atau device fisik</p>
                 <p>3. Tunggu aplikasi terbuild dan terinstall</p>
                 <div class="screenshot-placeholder">
-                    📸 Screenshot: Aplikasi HelloWorld berjalan di emulator Android menampilkan teks "Hello World!"
-                </div>
+                    <img src="/img/astu 9.png" alt="9" /> 
             </div>
         </section>
 
@@ -476,16 +477,6 @@ fun HelloWorldText() {
                 </div>
             </div>
 
-            <div class="requirements">
-                <h4>📋 Persyaratan Sistem:</h4>
-                <ul>
-                    <li>macOS 13.0 (Ventura) atau lebih tinggi</li>
-                    <li>Mac dengan chip Apple Silicon atau Intel</li>
-                    <li>Minimum 8GB RAM</li>
-                    <li>50GB ruang disk kosong</li>
-                </ul>
-            </div>
-
             <h3>Langkah Instalasi</h3>
 
             <div class="step">
@@ -493,26 +484,19 @@ fun HelloWorldText() {
                 <p>1. Buka App Store di Mac</p>
                 <p>2. Cari "Xcode" di search bar</p>
                 <p>3. Klik "Get" atau "Install"</p>
+                <p>4. Tunggu proses download selesai (ukuran file ~12GB). Install akan berjalan otomatis setelah download.</p>
                 <div class="screenshot-placeholder">
-                    📸 Screenshot: XCode di App Store dengan tombol Install/Get
+                    <img src="/img/xc 1.jpg" alt="1" /> 
                 </div>
             </div>
 
             <div class="step">
-                <h4>Step 2: Install XCode</h4>
-                <p>Tunggu proses download selesai (ukuran file ~15GB). Install akan berjalan otomatis setelah download.</p>
-                <div class="screenshot-placeholder">
-                    📸 Screenshot: Progress download XCode di App Store
-                </div>
-            </div>
-
-            <div class="step">
-                <h4>Step 3: First Launch</h4>
+                <h4>Step 2: First Launch</h4>
                 <p>1. Buka XCode dari folder Applications</p>
                 <p>2. Setujui license agreement</p>
                 <p>3. Install additional components jika diminta</p>
                 <div class="screenshot-placeholder">
-                    📸 Screenshot: XCode welcome screen dengan pilihan "Create a new Xcode project"
+                    <img src="/img/xc 2.jpg" alt="2" /> 
                 </div>
             </div>
 
@@ -522,7 +506,7 @@ fun HelloWorldText() {
                 <h4>Step 1: Create New Project</h4>
                 <p>Pilih "Create a new Xcode project" dari welcome screen</p>
                 <div class="screenshot-placeholder">
-                    📸 Screenshot: XCode start screen
+                    <img src="/img/xc 2.jpg" alt="2" /> 
                 </div>
             </div>
 
@@ -532,7 +516,7 @@ fun HelloWorldText() {
                 <p>2. Template: <strong>App</strong></p>
                 <p>3. Klik "Next"</p>
                 <div class="screenshot-placeholder">
-                    📸 Screenshot: Template selection dengan iOS App terpilih
+                    <img src="/img/xc 3.jpg" alt="3" /> 
                 </div>
             </div>
 
@@ -546,19 +530,13 @@ fun HelloWorldText() {
                     <li>• Language: <strong>Swift</strong></li>
                 </ul>
                 <div class="screenshot-placeholder">
-                    📸 Screenshot: Form konfigurasi project dengan semua opsi terisi
+                    <img src="/img/xc 3.jpg" alt="3" /> 
                 </div>
             </div>
 
             <div class="step">
                 <h4>Step 4: Struktur Project</h4>
                 <p>Perhatikan file <code>ContentView.swift</code> dan <code>HelloWorldApp.swift</code> di navigator</p>
-                <div class="screenshot-placeholder">
-                    📸 Screenshot: XCode project navigator menampilkan struktur file
-                </div>
-            </div>
-
-            <div class="step">
                 <h4>Step 5: Edit ContentView.swift</h4>
                 <pre><code>import SwiftUI
 
@@ -578,17 +556,14 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }</code></pre>
-                <div class="screenshot-placeholder">
-                    📸 Screenshot: ContentView.swift di editor dengan preview canvas di sebelah kanan
-                </div>
             </div>
 
             <div class="step">
                 <h4>Step 6: Run Project</h4>
-                <p>1. Pilih simulator (misalnya iPhone 15 Pro)</p>
+                <p>1. Pilih simulator (misalnya iPhone 17 Pro)</p>
                 <p>2. Klik tombol Run (▶) di toolbar</p>
                 <div class="screenshot-placeholder">
-                    📸 Screenshot: Aplikasi running di iOS Simulator menampilkan "Hello World!"
+                    <img src="/img/xc 4.jpg" alt="4" /> 
                 </div>
             </div>
         </section>
@@ -603,16 +578,6 @@ struct ContentView_Previews: PreviewProvider {
                 </div>
             </div>
 
-            <div class="requirements">
-                <h4>📋 Persyaratan Sistem:</h4>
-                <ul>
-                    <li>Node.js 18 atau lebih tinggi</li>
-                    <li>npm atau Yarn package manager</li>
-                    <li>Android Studio (untuk Android development)</li>
-                    <li>XCode (untuk iOS development, hanya di macOS)</li>
-                </ul>
-            </div>
-
             <h3>Langkah Instalasi</h3>
 
             <div class="step">
@@ -623,7 +588,7 @@ struct ContentView_Previews: PreviewProvider {
                 <pre><code>node --version
 npm --version</code></pre>
                 <div class="screenshot-placeholder">
-                    📸 Screenshot: Terminal menampilkan versi Node.js dan npm
+                    <img src="/img/rn 1.png" alt="1" /> 
                 </div>
             </div>
 
@@ -636,9 +601,6 @@ setx ANDROID_HOME "C:\Users\[USERNAME]\AppData\Local\Android\Sdk"
 
 # macOS/Linux
 export ANDROID_HOME=$HOME/Library/Android/sdk</code></pre>
-                <div class="screenshot-placeholder">
-                    📸 Screenshot: Environment variables dengan ANDROID_HOME terisi
-                </div>
             </div>
 
             <h3>Membuat Project HelloWorld</h3>
@@ -648,17 +610,13 @@ export ANDROID_HOME=$HOME/Library/Android/sdk</code></pre>
                 <p>Buka terminal dan jalankan:</p>
                 <pre><code>npx react-native init HelloWorld
 cd HelloWorld</code></pre>
-                <div class="screenshot-placeholder">
-                    📸 Screenshot: Terminal menampilkan output proses create project
-                </div>
+                
             </div>
 
             <div class="step">
                 <h4>Step 2: Struktur Project</h4>
                 <p>Buka project di editor (VS Code, dll). File utama: <code>App.tsx</code></p>
-                <div class="screenshot-placeholder">
-                    📸 Screenshot: Folder structure React Native di VS Code
-                </div>
+                
             </div>
 
             <div class="step">
@@ -699,9 +657,7 @@ const styles = StyleSheet.create({
 });
 
 export default App;</code></pre>
-                <div class="screenshot-placeholder">
-                    📸 Screenshot: Code editor dengan App.tsx yang sudah diedit
-                </div>
+                
             </div>
 
             <div class="step">
@@ -710,17 +666,13 @@ export default App;</code></pre>
                 <pre><code>npx react-native start</code></pre>
                 <p>2. Di terminal baru, jalankan:</p>
                 <pre><code>npx react-native run-android</code></pre>
-                <div class="screenshot-placeholder">
-                    📸 Screenshot: Terminal dan aplikasi running di Android emulator
-                </div>
+                
             </div>
 
             <div class="step">
                 <h4>Step 5: Run iOS (macOS only)</h4>
                 <pre><code>npx react-native run-ios</code></pre>
-                <div class="screenshot-placeholder">
-                    📸 Screenshot: Aplikasi running di iOS Simulator
-                </div>
+                
             </div>
         </section>
 
@@ -734,16 +686,6 @@ export default App;</code></pre>
                 </div>
             </div>
 
-            <div class="requirements">
-                <h4>📋 Persyaratan Sistem:</h4>
-                <ul>
-                    <li>Windows, macOS, atau Linux</li>
-                    <li>2GB RAM minimum (8GB disarankan)</li>
-                    <li>Git for Windows</li>
-                    <li>Android Studio dan/atau XCode</li>
-                </ul>
-            </div>
-
             <h3>Langkah Instalasi</h3>
 
             <div class="step">
@@ -752,7 +694,7 @@ export default App;</code></pre>
                 <p>2. Pilih sistem operasi Anda</p>
                 <p>3. Download Flutter SDK</p>
                 <div class="screenshot-placeholder">
-                    📸 Screenshot: Flutter download page dengan tombol download
+                    <img src="/img/fl 1.png" alt="1" /> 
                 </div>
             </div>
 
@@ -766,27 +708,29 @@ C:\src\flutter\bin
 # macOS/Linux: Tambahkan ke .bashrc atau .zshrc
 export PATH="$PATH:[PATH_TO_FLUTTER]/flutter/bin"</code></pre>
                 <div class="screenshot-placeholder">
-                    📸 Screenshot: Environment variables dengan Flutter path
+                    <img src="/img/fl2.png" alt="2" /> 
                 </div>
             </div>
 
             <div class="step">
                 <h4>Step 3: Verifikasi Instalasi</h4>
-                <pre><code>flutter doctor</code></pre>
+                <pre><code>flutter --version</code></pre>
                 <p>Periksa output dan install dependencies yang masih kurang</p>
                 <div class="screenshot-placeholder">
-                    📸 Screenshot: Output flutter doctor menampilkan status semua komponen
+                    <img src="/img/fl 2.png" alt="2" />
                 </div>
             </div>
 
             <div class="step">
-                <h4>Step 4: Install Flutter Plugin di Android Studio</h4>
-                <p>1. Buka Android Studio</p>
-                <p>2. Settings → Plugins</p>
-                <p>3. Cari "Flutter" dan "Dart"</p>
-                <p>4. Install kedua plugin dan restart</p>
+                <h4>Step 1: Install Flutter Extension di VS Code </h4>
+                <p>Jika Anda menggunakan <strong>VS Code</strong> sebagai editor:</p>
+                <p>1. Buka VS Code</p>
+                <p>2. Klik icon <strong>Extensions</strong> di sidebar (Ctrl+Shift+X / Cmd+Shift+X)</p>
+                <p>3. Cari <strong>"Flutter"</strong></p>
+                <p>4. Install extension "Flutter" by Dart Code</p>
+                <p>5. Extension "Dart" akan otomatis terinstall sebagai dependency</p>
                 <div class="screenshot-placeholder">
-                    📸 Screenshot: Plugin installation Flutter dan Dart
+                    <img src="/img/fl3.png" alt="1" /> 
                 </div>
             </div>
 
@@ -794,32 +738,42 @@ export PATH="$PATH:[PATH_TO_FLUTTER]/flutter/bin"</code></pre>
 
             <div class="step">
                 <h4>Step 1: Create Project via Terminal</h4>
+                <p>Buka terminal/command prompt dan jalankan:</p>
                 <pre><code>flutter create helloworld
 cd helloworld</code></pre>
-                <p><strong>Atau via Android Studio:</strong></p>
-                <p>File → New → New Flutter Project → Flutter Application</p>
                 <div class="screenshot-placeholder">
-                    📸 Screenshot: Terminal output flutter create atau New Flutter Project wizard
+                    <img src="/img/fl 4.png" alt="1" /> 
                 </div>
             </div>
 
             <div class="step">
-                <h4>Step 2: Project Configuration</h4>
+                <h4>Step 2: Buka Project di VS Code</h4>
+                <p><strong>Via Terminal:</strong></p>
+                <pre><code># Pastikan masih di folder helloworld
+code .</code></pre>
+                <p><strong>Via VS Code GUI:</strong></p>
+                <p>File → Open Folder → Pilih folder <code>helloworld</code></p>
+                <div class="screenshot-placeholder">
+                    <img src="/img/fl 5.png" alt="1" /> 
+                </div>
+            </div>
+
+            <div class="step">
+                <h4>Step 3: Struktur Project Flutter</h4>
+                <p>Perhatikan struktur folder di Explorer VS Code:</p>
                 <ul style="list-style: none; padding-left: 1rem;">
-                    <li>• Project name: <code>helloworld</code></li>
-                    <li>• Flutter SDK path: [lokasi Flutter SDK Anda]</li>
-                    <li>• Project location: pilih folder yang diinginkan</li>
+                    <li>📁 <strong>lib/</strong> - Folder utama kode Dart
+                        <ul style="list-style: none; padding-left: 2rem;">
+                            <li>📄 main.dart - Entry point aplikasi</li>
+                        </ul>
+                    </li>
+                    <li>📁 <strong>android/</strong> - Kode native Android</li>
+                    <li>📁 <strong>ios/</strong> - Kode native iOS</li>
+                    <li>📁 <strong>test/</strong> - Unit tests</li>
+                    <li>📄 <strong>pubspec.yaml</strong> - Dependencies & assets</li>
                 </ul>
                 <div class="screenshot-placeholder">
-                    📸 Screenshot: Form konfigurasi Flutter project
-                </div>
-            </div>
-
-            <div class="step">
-                <h4>Step 3: Struktur Project</h4>
-                <p>File utama: <code>lib/main.dart</code></p>
-                <div class="screenshot-placeholder">
-                    📸 Screenshot: Project structure Flutter di Android Studio
+                    <img src="/img/fl 6.png" alt="1" /> 
                 </div>
             </div>
 
@@ -830,3 +784,407 @@ cd helloworld</code></pre>
 void main() {
   runApp(const MyApp());
 }
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Hello World',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: const HelloWorldPage(),
+    );
+  }
+}
+
+class HelloWorldPage extends StatelessWidget {
+  const HelloWorldPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Hello World App'),
+      ),
+      body: const Center(
+        child: Text(
+          'Hello World!',
+          style: TextStyle(
+            fontSize: 32,
+            fontWeight: FontWeight.bold,
+            color: Colors.blue,
+          ),
+        ),
+      ),
+    );
+  }
+}</code></pre>
+                <div class="screenshot-placeholder">
+                    <img src="/img/fl 6.png" alt="1" />
+                </div>
+            </div>
+
+            <div class="step">
+                <h4>Step 5: Setup Emulator/Device di VS Code</h4>
+                <p>1. Tekan <strong>Ctrl+Shift+P</strong> (Cmd+Shift+P di macOS) untuk membuka Command Palette</p>
+                <p>2. Ketik <strong>"Flutter: Select Device"</strong></p>
+                <p>3. Pilih device/emulator yang tersedia:</p>
+                <ul style="list-style: none; padding-left: 1rem;">
+                    <li>• Android Emulator (dari Android Studio)</li>
+                    <li>• iOS Simulator (macOS only)</li>
+                    <li>• Chrome (untuk web development)</li>
+                    <li>• Physical device (jika terkoneksi)</li>
+                </ul>
+            </div>
+
+            <div class="step">
+                <h4>Step 6: Run Project di VS Code</h4>
+                <p><strong>Metode 1: Via Debug Menu</strong></p>
+                <p>1. Tekan <strong>F5</strong> atau klik menu Run → Start Debugging</p>
+                <p>2. Pilih "Dart & Flutter" jika diminta</p>
+                
+                <p><strong>Metode 2: Via Terminal</strong></p>
+                <pre><code>flutter run</code></pre>
+                
+                <p><strong>Metode 3: Via Play Button</strong></p>
+                <p>Klik icon ▶ (Play) di pojok kanan atas VS Code</p>
+                <div class="screenshot-placeholder">
+                    <img src="/img/fl 7.png" alt="1" />
+                </div>
+            </div>
+
+            <div class="step">
+                <h4>Step 7: Melihat Aplikasi Running</h4>
+                <p>Aplikasi akan muncul di emulator/device dengan tampilan default Flutter demo</p>
+                <div class="screenshot-placeholder">
+                    <img src="/img/fl 9.png" alt="1" />
+                </div>
+            </div>
+
+            <div class="tip-box">
+                <h4>💡 Tips Flutter di VS Code:</h4>
+                <p><strong>Keyboard Shortcuts:</strong></p>
+                <ul style="list-style: none; padding-left: 1rem;">
+                    <li>• <strong>r</strong> - Hot reload (saat app running di terminal)</li>
+                    <li>• <strong>R</strong> - Hot restart</li>
+                    <li>• <strong>F5</strong> - Start debugging</li>
+                    <li>• <strong>Shift+F5</strong> - Stop debugging</li>
+                    <li>• <strong>Ctrl+Shift+P</strong> - Command Palette</li>
+                </ul>
+                
+                <p style="margin-top: 1rem;"><strong>Useful Commands:</strong></p>
+                <ul style="list-style: none; padding-left: 1rem;">
+                    <li>• <code>flutter doctor</code> - Check konfigurasi</li>
+                    <li>• <code>flutter devices</code> - List available devices</li>
+                    <li>• <code>flutter pub get</code> - Update dependencies</li>
+                    <li>• <code>flutter clean</code> - Clean build files</li>
+                    <li>• <code>flutter format .</code> - Format code</li>
+                </ul>
+
+                <p style="margin-top: 1rem;"><strong>VS Code Extensions Tambahan (Optional):</strong></p>
+                <ul style="list-style: none; padding-left: 1rem;">
+                    <li>• Awesome Flutter Snippets - Code snippets</li>
+                    <li>• Flutter Widget Snippets - Widget shortcuts</li>
+                    <li>• Pubspec Assist - Manage dependencies</li>
+                    <li>• Flutter Tree - Widget tree visualization</li>
+                </ul>
+            </div>
+
+        </section>
+        <!-- KMM -->
+        <section id="kmm" class="framework-section">
+            <div class="framework-header">
+                <div class="framework-icon">K</div>
+                <div>
+                    <h2>5. KMM - Kotlin Multiplatform Mobile</h2>
+                    <p>Framework dari JetBrains untuk sharing business logic antara Android dan iOS menggunakan Kotlin</p>
+                </div>
+            </div>
+
+            <h3>Langkah Instalasi</h3>
+
+            <div class="step">
+                <h4>Step 1: Install KMM Plugin di Android Studio</h4>
+                <p>1. Buka Android Studio</p>
+                <p>2. Masuk ke <strong>Settings/Preferences</strong> (Ctrl+Alt+S / Cmd+,)</p>
+                <p>3. Pilih <strong>Plugins</strong></p>
+                <p>4. Klik tab <strong>Marketplace</strong></p>
+                <p>5. Cari <strong>"Kotlin Multiplatform Mobile"</strong></p>
+                <p>6. Klik <strong>Install</strong></p>
+                <p>7. Restart Android Studio setelah instalasi selesai</p>
+                <div class="screenshot-placeholder">
+                    <img src="/img/km 1.png" alt="1" />
+                </div>
+            </div>
+
+            <div class="step">
+                <h4>Step 2: Install Kdoctor (macOS - Opsional tapi Disarankan)</h4>
+                <p>Kdoctor adalah tool untuk mengecek environment KMM Anda:</p>
+                <pre><code># Install menggunakan Homebrew
+brew install kdoctor
+
+# Jalankan untuk mengecek konfigurasi
+kdoctor</code></pre>
+                <p>Kdoctor akan mengecek:</p>
+                <ul style="list-style: none; padding-left: 1rem;">
+                    <li>✓ Java Development Kit</li>
+                    <li>✓ Android Studio</li>
+                    <li>✓ XCode</li>
+                    <li>✓ CocoaPods</li>
+                </ul>
+            </div>
+
+            <div class="step">
+                <h4>Step 3: Install CocoaPods (macOS - Untuk iOS)</h4>
+                <p>CocoaPods dibutuhkan untuk manage iOS dependencies:</p>
+                <pre><code># Install CocoaPods
+sudo gem install cocoapods
+
+# Verifikasi instalasi
+pod --version</code></pre>
+            </div>
+
+            <div class="step">
+                <h4>Step 4: Setup XCode Command Line Tools (macOS)</h4>
+                <pre><code># Install Command Line Tools
+xcode-select --install
+
+# Set path ke XCode
+sudo xcode-select -s /Applications/Xcode.app/Contents/Developer</code></pre>
+            </div>
+
+            <h3>Membuat Project HelloWorld</h3>
+
+            <div class="step">
+                <h4>Step 1: Create New KMM Project</h4>
+                <p>1. Buka Android Studio</p>
+                <p>2. Klik <strong>File → New → New Project</strong></p>
+                <p>3. Pilih <strong>"Kotlin Multiplatform App"</strong> dari daftar template</p>
+                <p>4. Klik <strong>Next</strong></p>
+                <div class="screenshot-placeholder">
+                    <img src="/img/km 2.png" alt="1" />
+                </div>
+            </div>
+
+            <div class="step">
+                <h4>Step 2: Configure Project</h4>
+                <p>Isi konfigurasi project:</p>
+                <ul style="list-style: none; padding-left: 1rem;">
+                    <li>• Name: <code>HelloWorld</code></li>
+                    <li>• Package name: <code>com.example.helloworld</code></li>
+                    <li>• Save location: pilih folder yang diinginkan</li>
+                    <li>• Minimum SDK: API 24 atau lebih tinggi</li>
+                </ul>
+                <p><strong>Select platforms:</strong></p>
+                <ul style="list-style: none; padding-left: 1rem;">
+                    <li>☑ Android</li>
+                    <li>☑ iOS</li>
+                </ul>
+                <p>Klik <strong>Finish</strong></p>
+            </div>
+
+            <div class="step">
+                <h4>Step 3: Tunggu Gradle Sync</h4>
+                <p>Android Studio akan melakukan:</p>
+                <ul style="list-style: none; padding-left: 1rem;">
+                    <li>• Gradle sync</li>
+                    <li>• Download dependencies</li>
+                    <li>• Setup iOS framework (jika di macOS)</li>
+                </ul>
+                <p>Proses ini bisa memakan waktu beberapa menit. Tunggu hingga selesai.</p>
+               
+            </div>
+
+            <div class="step">
+                <h4>Step 4: Struktur Project KMM</h4>
+                <p>Perhatikan struktur folder yang unik dari KMM:</p>
+                <ul style="list-style: none; padding-left: 1rem;">
+                    <li>📁 <strong>shared/</strong> - Kode yang dibagikan antara Android & iOS
+                        <ul style="list-style: none; padding-left: 2rem;">
+                            <li>📁 commonMain/ - Kode platform-independent</li>
+                            <li>📁 androidMain/ - Implementasi khusus Android</li>
+                            <li>📁 iosMain/ - Implementasi khusus iOS</li>
+                        </ul>
+                    </li>
+                    <li>📁 <strong>androidApp/</strong> - Aplikasi Android native</li>
+                    <li>📁 <strong>iosApp/</strong> - Aplikasi iOS native (SwiftUI)</li>
+                </ul>
+               
+            </div>
+
+            <div class="step">
+                <h4>Step 5: Edit Shared Code - Greeting.kt</h4>
+                <p>File: <code>shared/src/commonMain/kotlin/com/example/helloworld/Greeting.kt</code></p>
+                <pre><code>package com.example.helloworld
+
+class Greeting {
+    private val platform: Platform = getPlatform()
+
+    fun greet(): String {
+        return "Hello World from ${platform.name}!"
+    }
+}
+
+interface Platform {
+    val name: String
+}
+
+expect fun getPlatform(): Platform</code></pre>
+                <p><strong>Penjelasan:</strong></p>
+                <ul style="list-style: none; padding-left: 1rem;">
+                    <li>• <code>expect</code> keyword: Deklarasi yang akan diimplementasikan di setiap platform</li>
+                    <li>• <code>Platform</code> interface: Kontrak untuk mendapatkan nama platform</li>
+                    <li>• <code>Greeting</code> class: Business logic yang dibagikan</li>
+                </ul>
+                
+            </div>
+
+            <div class="step">
+                <h4>Step 6: Implementasi Android - Platform.kt</h4>
+                <p>File: <code>shared/src/androidMain/kotlin/com/example/helloworld/Platform.kt</code></p>
+                <pre><code>package com.example.helloworld
+
+import android.os.Build
+
+actual fun getPlatform(): Platform = AndroidPlatform()
+
+class AndroidPlatform : Platform {
+    override val name: String = 
+        "Android ${Build.VERSION.SDK_INT}"
+}</code></pre>
+                <p><strong>Penjelasan:</strong></p>
+                <ul style="list-style: none; padding-left: 1rem;">
+                    <li>• <code>actual</code> keyword: Implementasi dari <code>expect</code> function</li>
+                    <li>• Menggunakan Android SDK untuk mendapatkan versi OS</li>
+                </ul>
+                
+            </div>
+
+            <div class="step">
+                <h4>Step 7: Implementasi iOS - Platform.kt</h4>
+                <p>File: <code>shared/src/iosMain/kotlin/com/example/helloworld/Platform.kt</code></p>
+                <pre><code>package com.example.helloworld
+
+import platform.UIKit.UIDevice
+
+actual fun getPlatform(): Platform = IOSPlatform()
+
+class IOSPlatform : Platform {
+    override val name: String = 
+        UIDevice.currentDevice.systemName() + " " + 
+        UIDevice.currentDevice.systemVersion
+}</code></pre>
+                <p><strong>Penjelasan:</strong></p>
+                <ul style="list-style: none; padding-left: 1rem;">
+                    <li>• <code>actual</code> keyword untuk iOS implementation</li>
+                    <li>• Menggunakan UIKit framework untuk mendapatkan info device</li>
+                </ul>
+                
+            </div>
+
+            <div class="step">
+                <h4>Step 8: Android UI - MainActivity.kt</h4>
+                <p>File: <code>androidApp/src/main/java/com/example/helloworld/android/MainActivity.kt</code></p>
+                <pre><code>package com.example.helloworld.android
+
+import android.os.Bundle
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.*
+import androidx.compose.material3.*
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import com.example.helloworld.Greeting
+
+class MainActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContent {
+            MyApplicationTheme {
+                Surface(
+                    modifier = Modifier.fillMaxSize(),
+                    color = MaterialTheme.colorScheme.background
+                ) {
+                    GreetingView(Greeting().greet())
+                }
+            }
+        }
+    }
+}
+
+@Composable
+fun GreetingView(text: String) {
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(16.dp),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center
+    ) {
+        Text(
+            text = text,
+            fontSize = 24.sp,
+            style = MaterialTheme.typography.headlineMedium
+        )
+    }
+}
+
+@Preview
+@Composable
+fun DefaultPreview() {
+    MyApplicationTheme {
+        GreetingView("Hello World from Android!")
+    }
+}</code></pre>
+                
+            </div>
+
+            <div class="step">
+                <h4>Step 9: iOS UI - ContentView.swift</h4>
+                <p>File: <code>iosApp/iosApp/ContentView.swift</code></p>
+                <pre><code>import SwiftUI
+import shared
+
+struct ContentView: View {
+    let greet = Greeting().greet()
+
+    var body: some View {
+        VStack {
+            Text(greet)
+                .font(.title)
+                .padding()
+        }
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}</code></pre>
+                <p><strong>Perhatikan:</strong></p>
+                <ul style="list-style: none; padding-left: 1rem;">
+                    <li>• <code>import shared</code> - Import shared Kotlin module</li>
+                    <li>• <code>Greeting()</code> - Menggunakan class dari shared module</li>
+                </ul>
+                
+            </div>
+
+            <div class="step">
+                <h4>Step 10: Run Android App</h4>
+                <p>1. Di Android Studio, pilih run configuration: <strong>androidApp</strong></p>
+                <p>2. Pilih emulator atau physical device</p>
+                <p>3. Klik tombol <strong>Run</strong> (▶)</p>
+                <p>4. Aplikasi akan menampilkan: <code>"Hello World from Android 34!"</code> (atau versi SDK Anda)</p>
+                <div class="screenshot-placeholder">
+                    <img src="/img/fl 9.png" alt="1" />
+                </div>
+            </div>            
+        </section>
