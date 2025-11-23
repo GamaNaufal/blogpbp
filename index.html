@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial Lengkap Mobile Development - 5 Framework Populer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f4f4f4;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        nav {
+            background: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 20px;
+            display: flex;
+            gap: 2rem;
+            overflow-x: auto;
+        }
+
+        .nav-content a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            white-space: nowrap;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+
+        .nav-content a:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+
+        .intro-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        .framework-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        .framework-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .framework-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        h2 {
+            color: #667eea;
+            font-size: 2rem;
+        }
+
+        h3 {
+            color: #764ba2;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        h4 {
+            color: #555;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .requirements {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            margin: 1rem 0;
+        }
+
+        .requirements ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .requirements li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .requirements li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .step {
+            background: #fff;
+            border-left: 4px solid #764ba2;
+            padding: 1rem 1.5rem;
+            margin: 1rem 0;
+            border-radius: 5px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .screenshot-placeholder {
+            background: linear-gradient(135deg, #e0e7ff 0%, #f3e8ff 100%);
+            border: 2px dashed #667eea;
+            border-radius: 8px;
+            padding: 3rem;
+            text-align: center;
+            margin: 1rem 0;
+            color: #667eea;
+            font-style: italic;
+        }
+
+        pre {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 1.5rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 1rem 0;
+            font-size: 0.9rem;
+        }
+
+        code {
+            font-family: 'Courier New', monospace;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 1rem;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        .comparison-table th {
+            background: #667eea;
+            color: white;
+            font-weight: 600;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        .tip-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 1rem 1.5rem;
+            margin: 1rem 0;
+            border-radius: 5px;
+        }
+
+        .tip-box h4 {
+            color: #856404;
+            margin-top: 0;
+        }
+
+        .troubleshooting {
+            background: #f8d7da;
+            border-left: 4px solid #dc3545;
+            padding: 1rem 1.5rem;
+            margin: 1rem 0;
+            border-radius: 5px;
+        }
+
+        .troubleshooting h4 {
+            color: #721c24;
+            margin-top: 0;
+        }
+
+        footer {
+            background: #2d2d2d;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            background: #667eea;
+            color: white;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin: 0.2rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .nav-content {
+                flex-wrap: nowrap;
+            }
+
+            .framework-header {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>📱 Tutorial Lengkap Mobile Development</h1>
+            <p class="subtitle">Panduan Instalasi dan Membuat Project HelloWorld untuk 5 Framework Populer</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="nav-content">
+            <a href="#intro">Intro</a>
+            <a href="#android-studio">Android Studio</a>
+            <a href="#xcode">XCode</a>
+            <a href="#react-native">React Native</a>
+            <a href="#flutter">Flutter</a>
+            <a href="#kmm">KMM</a>
+            <a href="#comparison">Perbandingan</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section id="intro" class="intro-section">
+            <h2>Pendahuluan</h2>
+            <p>Selamat datang di tutorial lengkap mobile development! Dalam tutorial ini, saya akan memandu Anda melalui proses instalasi dan pembuatan project HelloWorld menggunakan 5 framework development mobile yang paling populer saat ini.</p>
+            
+            <div style="margin-top: 1.5rem;">
+                <span class="badge">Android Native</span>
+                <span class="badge">iOS Native</span>
+                <span class="badge">Cross-Platform</span>
+                <span class="badge">Multiplatform</span>
+            </div>
+        </section>
+
+        <!-- ANDROID STUDIO -->
+        <section id="android-studio" class="framework-section">
+            <div class="framework-header">
+                <div class="framework-icon">A</div>
+                <div>
+                    <h2>1. Android Studio (Android - Kotlin)</h2>
+                    <p>IDE resmi untuk pengembangan aplikasi Android dengan bahasa Kotlin</p>
+                </div>
+            </div>
+
+            <div class="requirements">
+                <h4>📋 Persyaratan Sistem:</h4>
+                <ul>
+                    <li>Windows 10/11, macOS 10.14+, atau Linux</li>
+                    <li>RAM minimum 8GB (disarankan 16GB)</li>
+                    <li>Ruang disk: 8GB minimum</li>
+                    <li>JDK 11 atau lebih tinggi</li>
+                </ul>
+            </div>
+
+            <h3>Langkah Instalasi</h3>
+
+            <div class="step">
+                <h4>Step 1: Download Android Studio</h4>
+                <p>1. Kunjungi <strong>https://developer.android.com/studio</strong></p>
+                <p>2. Klik tombol "Download Android Studio"</p>
+                <p>3. Setujui terms and conditions</p>
+                <div class="screenshot-placeholder">
+                    📸 Screenshot: Halaman download Android Studio dengan tombol download terlihat jelas
+                </div>
+            </div>
+
+            <div class="step">
+                <h4>Step 2: Install Android Studio</h4>
+                <p>1. Jalankan file installer (.exe untuk Windows, .dmg untuk macOS)</p>
+                <p>2. Pilih "Standard" installation type</p>
+                <p>3. Pilih tema UI (Light/Dark sesuai preferensi)</p>
+                <p>4. Tunggu hingga proses download SDK selesai</p>
+                <div class="screenshot-placeholder">
+                    📸 Screenshot: Wizard instalasi Android Studio menampilkan progress instalasi
+                </div>
+            </div>
+
+            <div class="step">
+                <h4>Step 3: Konfigurasi SDK</h4>
+                <p>1. Buka Android Studio</p>
+                <p>2. Masuk ke Tools → SDK Manager</p>
+                <p>3. Pastikan Android SDK terbaru terinstall</p>
+                <div class="screenshot-placeholder">
+                    📸 Screenshot: SDK Manager dengan list komponen SDK yang terinstall
+                </div>
+            </div>
+
+            <h3>Membuat Project HelloWorld</h3>
+
+            <div class="step">
+                <h4>Step 1: New Project</h4>
+                <p>1. Klik "New Project" di welcome screen</p>
+                <p>2. Pilih "Empty Activity"</p>
+                <div class="screenshot-placeholder">
+                    📸 Screenshot: Template selection screen dengan Empty Activity terpilih
+                </div>
+            </div>
+
+            <div class="step">
+                <h4>Step 2: Configure Project</h4>
+                <p>Isi konfigurasi project sebagai berikut:</p>
+                <ul style="list-style: none; padding-left: 1rem;">
+                    <li>• Name: <code>HelloWorld</code></li>
+                    <li>• Package name: <code>com.example.helloworld</code></li>
+                    <li>• Save location: pilih folder yang diinginkan</li>
+                    <li>• Language: <strong>Kotlin</strong></li>
+                    <li>• Minimum SDK: API 24 (Android 7.0)</li>
+                </ul>
+                <div class="screenshot-placeholder">
+                    📸 Screenshot: Form konfigurasi project dengan semua field terisi
+                </div>
+            </div>
+
+            <div class="step">
+                <h4>Step 3: Tunggu Gradle Build</h4>
+                <p>Android Studio akan melakukan sync Gradle secara otomatis. Tunggu hingga proses selesai.</p>
+                <div class="screenshot-placeholder">
+                    📸 Screenshot: Progress bar Gradle build di bagian bawah Android Studio
+                </div>
+            </div>
+
+            <div class="step">
+                <h4>Step 4: Struktur Project</h4>
+                <p>Perhatikan struktur folder di panel Project:</p>
+                <p>• File utama: <code>MainActivity.kt</code> dan <code>activity_main.xml</code></p>
+                <div class="screenshot-placeholder">
+                    📸 Screenshot: Project structure menampilkan folder app, manifests, dan file-file utama
+                </div>
+            </div>
+
+            <div class="step">
+                <h4>Step 5: Edit MainActivity.kt</h4>
+                <p>Edit file MainActivity.kt dengan kode berikut:</p>
+                <pre><code>package com.example.helloworld
+
+import android.os.Bundle
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.sp
+
+class MainActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContent {
+            HelloWorldText()
+        }
+    }
+}
+
+@Composable
+fun HelloWorldText() {
+    Box(
+        modifier = Modifier.fillMaxSize(),
+        contentAlignment = Alignment.Center
+    ) {
+        Text(
+            text = "Hello World!",
+            fontSize = 32.sp
+        )
+    }
+}</code></pre>
+                <div class="screenshot-placeholder">
+                    📸 Screenshot: Code editor dengan MainActivity.kt yang sudah diedit
+                </div>
+            </div>
+
+            <div class="step">
+                <h4>Step 6: Run Project</h4>
+                <p>1. Klik tombol Run (ikon play hijau) di toolbar</p>
+                <p>2. Pilih emulator atau device fisik</p>
+                <p>3. Tunggu aplikasi terbuild dan terinstall</p>
+                <div class="screenshot-placeholder">
+                    📸 Screenshot: Aplikasi HelloWorld berjalan di emulator Android menampilkan teks "Hello World!"
+                </div>
+            </div>
+        </section>
+
+        <!-- XCODE -->
+        <section id="xcode" class="framework-section">
+            <div class="framework-header">
+                <div class="framework-icon">X</div>
+                <div>
+                    <h2>2. XCode (iOS - Swift)</h2>
+                    <p>IDE resmi Apple untuk pengembangan aplikasi iOS dengan bahasa Swift</p>
+                </div>
+            </div>
+
+            <div class="requirements">
+                <h4>📋 Persyaratan Sistem:</h4>
+                <ul>
+                    <li>macOS 13.0 (Ventura) atau lebih tinggi</li>
+                    <li>Mac dengan chip Apple Silicon atau Intel</li>
+                    <li>Minimum 8GB RAM</li>
+                    <li>50GB ruang disk kosong</li>
+                </ul>
+            </div>
+
+            <h3>Langkah Instalasi</h3>
+
+            <div class="step">
+                <h4>Step 1: Download XCode</h4>
+                <p>1. Buka App Store di Mac</p>
+                <p>2. Cari "Xcode" di search bar</p>
+                <p>3. Klik "Get" atau "Install"</p>
+                <div class="screenshot-placeholder">
+                    📸 Screenshot: XCode di App Store dengan tombol Install/Get
+                </div>
+            </div>
+
+            <div class="step">
+                <h4>Step 2: Install XCode</h4>
+                <p>Tunggu proses download selesai (ukuran file ~15GB). Install akan berjalan otomatis setelah download.</p>
+                <div class="screenshot-placeholder">
+                    📸 Screenshot: Progress download XCode di App Store
+                </div>
+            </div>
+
+            <div class="step">
+                <h4>Step 3: First Launch</h4>
+                <p>1. Buka XCode dari folder Applications</p>
+                <p>2. Setujui license agreement</p>
+                <p>3. Install additional components jika diminta</p>
+                <div class="screenshot-placeholder">
+                    📸 Screenshot: XCode welcome screen dengan pilihan "Create a new Xcode project"
+                </div>
+            </div>
+
+            <h3>Membuat Project HelloWorld</h3>
+
+            <div class="step">
+                <h4>Step 1: Create New Project</h4>
+                <p>Pilih "Create a new Xcode project" dari welcome screen</p>
+                <div class="screenshot-placeholder">
+                    📸 Screenshot: XCode start screen
+                </div>
+            </div>
+
+            <div class="step">
+                <h4>Step 2: Choose Template</h4>
+                <p>1. Platform: <strong>iOS</strong></p>
+                <p>2. Template: <strong>App</strong></p>
+                <p>3. Klik "Next"</p>
+                <div class="screenshot-placeholder">
+                    📸 Screenshot: Template selection dengan iOS App terpilih
+                </div>
+            </div>
+
+            <div class="step">
+                <h4>Step 3: Project Configuration</h4>
+                <ul style="list-style: none; padding-left: 1rem;">
+                    <li>• Product Name: <code>HelloWorld</code></li>
+                    <li>• Team: None (untuk development pribadi)</li>
+                    <li>• Organization Identifier: <code>com.example</code></li>
+                    <li>• Interface: <strong>SwiftUI</strong></li>
+                    <li>• Language: <strong>Swift</strong></li>
+                </ul>
+                <div class="screenshot-placeholder">
+                    📸 Screenshot: Form konfigurasi project dengan semua opsi terisi
+                </div>
+            </div>
+
+            <div class="step">
+                <h4>Step 4: Struktur Project</h4>
+                <p>Perhatikan file <code>ContentView.swift</code> dan <code>HelloWorldApp.swift</code> di navigator</p>
+                <div class="screenshot-placeholder">
+                    📸 Screenshot: XCode project navigator menampilkan struktur file
+                </div>
+            </div>
+
+            <div class="step">
+                <h4>Step 5: Edit ContentView.swift</h4>
+                <pre><code>import SwiftUI
+
+struct ContentView: View {
+    var body: some View {
+        VStack {
+            Text("Hello World!")
+                .font(.largeTitle)
+                .foregroundColor(.blue)
+                .padding()
+        }
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}</code></pre>
+                <div class="screenshot-placeholder">
+                    📸 Screenshot: ContentView.swift di editor dengan preview canvas di sebelah kanan
+                </div>
+            </div>
+
+            <div class="step">
+                <h4>Step 6: Run Project</h4>
+                <p>1. Pilih simulator (misalnya iPhone 15 Pro)</p>
+                <p>2. Klik tombol Run (▶) di toolbar</p>
+                <div class="screenshot-placeholder">
+                    📸 Screenshot: Aplikasi running di iOS Simulator menampilkan "Hello World!"
+                </div>
+            </div>
+        </section>
+
+        <!-- REACT NATIVE -->
+        <section id="react-native" class="framework-section">
+            <div class="framework-header">
+                <div class="framework-icon">RN</div>
+                <div>
+                    <h2>3. React Native (Multiplatform)</h2>
+                    <p>Framework JavaScript untuk membuat aplikasi mobile native untuk iOS dan Android</p>
+                </div>
+            </div>
+
+            <div class="requirements">
+                <h4>📋 Persyaratan Sistem:</h4>
+                <ul>
+                    <li>Node.js 18 atau lebih tinggi</li>
+                    <li>npm atau Yarn package manager</li>
+                    <li>Android Studio (untuk Android development)</li>
+                    <li>XCode (untuk iOS development, hanya di macOS)</li>
+                </ul>
+            </div>
+
+            <h3>Langkah Instalasi</h3>
+
+            <div class="step">
+                <h4>Step 1: Install Node.js</h4>
+                <p>1. Download dari <strong>https://nodejs.org/</strong></p>
+                <p>2. Install versi LTS (Long Term Support)</p>
+                <p>3. Verifikasi instalasi dengan command:</p>
+                <pre><code>node --version
+npm --version</code></pre>
+                <div class="screenshot-placeholder">
+                    📸 Screenshot: Terminal menampilkan versi Node.js dan npm
+                </div>
+            </div>
+
+            <div class="step">
+                <h4>Step 2: Setup Environment Android</h4>
+                <p>1. Install Android Studio (lihat bagian Android Studio di atas)</p>
+                <p>2. Set ANDROID_HOME environment variable:</p>
+                <pre><code># Windows
+setx ANDROID_HOME "C:\Users\[USERNAME]\AppData\Local\Android\Sdk"
+
+# macOS/Linux
+export ANDROID_HOME=$HOME/Library/Android/sdk</code></pre>
+                <div class="screenshot-placeholder">
+                    📸 Screenshot: Environment variables dengan ANDROID_HOME terisi
+                </div>
+            </div>
+
+            <h3>Membuat Project HelloWorld</h3>
+
+            <div class="step">
+                <h4>Step 1: Create Project</h4>
+                <p>Buka terminal dan jalankan:</p>
+                <pre><code>npx react-native init HelloWorld
+cd HelloWorld</code></pre>
+                <div class="screenshot-placeholder">
+                    📸 Screenshot: Terminal menampilkan output proses create project
+                </div>
+            </div>
+
+            <div class="step">
+                <h4>Step 2: Struktur Project</h4>
+                <p>Buka project di editor (VS Code, dll). File utama: <code>App.tsx</code></p>
+                <div class="screenshot-placeholder">
+                    📸 Screenshot: Folder structure React Native di VS Code
+                </div>
+            </div>
+
+            <div class="step">
+                <h4>Step 3: Edit App.tsx</h4>
+                <pre><code>import React from 'react';
+import {
+  SafeAreaView,
+  Text,
+  StyleSheet,
+  View,
+} from 'react-native';
+
+function App(): React.JSX.Element {
+  return (
+    &lt;SafeAreaView style={styles.container}&gt;
+      &lt;View style={styles.content}&gt;
+        &lt;Text style={styles.text}&gt;Hello World!&lt;/Text&gt;
+      &lt;/View&gt;
+    &lt;/SafeAreaView&gt;
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+  },
+  content: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  text: {
+    fontSize: 32,
+    fontWeight: 'bold',
+    color: '#007AFF',
+  },
+});
+
+export default App;</code></pre>
+                <div class="screenshot-placeholder">
+                    📸 Screenshot: Code editor dengan App.tsx yang sudah diedit
+                </div>
+            </div>
+
+            <div class="step">
+                <h4>Step 4: Run Android</h4>
+                <p>1. Start Metro bundler (jika belum jalan):</p>
+                <pre><code>npx react-native start</code></pre>
+                <p>2. Di terminal baru, jalankan:</p>
+                <pre><code>npx react-native run-android</code></pre>
+                <div class="screenshot-placeholder">
+                    📸 Screenshot: Terminal dan aplikasi running di Android emulator
+                </div>
+            </div>
+
+            <div class="step">
+                <h4>Step 5: Run iOS (macOS only)</h4>
+                <pre><code>npx react-native run-ios</code></pre>
+                <div class="screenshot-placeholder">
+                    📸 Screenshot: Aplikasi running di iOS Simulator
+                </div>
+            </div>
+        </section>
+
+        <!-- FLUTTER -->
+        <section id="flutter" class="framework-section">
+            <div class="framework-header">
+                <div class="framework-icon">F</div>
+                <div>
+                    <h2>4. Flutter (Multiplatform)</h2>
+                    <p>Framework UI dari Google untuk membuat aplikasi natively compiled untuk mobile, web, dan desktop</p>
+                </div>
+            </div>
+
+            <div class="requirements">
+                <h4>📋 Persyaratan Sistem:</h4>
+                <ul>
+                    <li>Windows, macOS, atau Linux</li>
+                    <li>2GB RAM minimum (8GB disarankan)</li>
+                    <li>Git for Windows</li>
+                    <li>Android Studio dan/atau XCode</li>
+                </ul>
+            </div>
+
+            <h3>Langkah Instalasi</h3>
+
+            <div class="step">
+                <h4>Step 1: Download Flutter SDK</h4>
+                <p>1. Kunjungi <strong>https://flutter.dev/docs/get-started/install</strong></p>
+                <p>2. Pilih sistem operasi Anda</p>
+                <p>3. Download Flutter SDK</p>
+                <div class="screenshot-placeholder">
+                    📸 Screenshot: Flutter download page dengan tombol download
+                </div>
+            </div>
+
+            <div class="step">
+                <h4>Step 2: Extract dan Setup PATH</h4>
+                <p>1. Extract file zip ke lokasi pilihan (misal: C:\src\flutter)</p>
+                <p>2. Tambahkan flutter\bin ke system PATH</p>
+                <pre><code># Windows: Tambahkan ke Environment Variables
+C:\src\flutter\bin
+
+# macOS/Linux: Tambahkan ke .bashrc atau .zshrc
+export PATH="$PATH:[PATH_TO_FLUTTER]/flutter/bin"</code></pre>
+                <div class="screenshot-placeholder">
+                    📸 Screenshot: Environment variables dengan Flutter path
+                </div>
+            </div>
+
+            <div class="step">
+                <h4>Step 3: Verifikasi Instalasi</h4>
+                <pre><code>flutter doctor</code></pre>
+                <p>Periksa output dan install dependencies yang masih kurang</p>
+                <div class="screenshot-placeholder">
+                    📸 Screenshot: Output flutter doctor menampilkan status semua komponen
+                </div>
+            </div>
+
+            <div class="step">
+                <h4>Step 4: Install Flutter Plugin di Android Studio</h4>
+                <p>1. Buka Android Studio</p>
+                <p>2. Settings → Plugins</p>
+                <p>3. Cari "Flutter" dan "Dart"</p>
+                <p>4. Install kedua plugin dan restart</p>
+                <div class="screenshot-placeholder">
+                    📸 Screenshot: Plugin installation Flutter dan Dart
+                </div>
+            </div>
+
+            <h3>Membuat Project HelloWorld</h3>
+
+            <div class="step">
+                <h4>Step 1: Create Project via Terminal</h4>
+                <pre><code>flutter create helloworld
+cd helloworld</code></pre>
+                <p><strong>Atau via Android Studio:</strong></p>
+                <p>File → New → New Flutter Project → Flutter Application</p>
+                <div class="screenshot-placeholder">
+                    📸 Screenshot: Terminal output flutter create atau New Flutter Project wizard
+                </div>
+            </div>
+
+            <div class="step">
+                <h4>Step 2: Project Configuration</h4>
+                <ul style="list-style: none; padding-left: 1rem;">
+                    <li>• Project name: <code>helloworld</code></li>
+                    <li>• Flutter SDK path: [lokasi Flutter SDK Anda]</li>
+                    <li>• Project location: pilih folder yang diinginkan</li>
+                </ul>
+                <div class="screenshot-placeholder">
+                    📸 Screenshot: Form konfigurasi Flutter project
+                </div>
+            </div>
+
+            <div class="step">
+                <h4>Step 3: Struktur Project</h4>
+                <p>File utama: <code>lib/main.dart</code></p>
+                <div class="screenshot-placeholder">
+                    📸 Screenshot: Project structure Flutter di Android Studio
+                </div>
+            </div>
+
+            <div class="step">
+                <h4>Step 4: Edit main.dart</h4>
+                <pre><code>import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
